@@ -1,11 +1,7 @@
 from fastapi import FastAPI
-from database import lifespan
-from routers import auth
 
-app = FastAPI(lifespan=lifespan)
+app = FastAPI()
 
-# include auth routes
-app.include_router(auth.router)
 
 
 @app.get("/")

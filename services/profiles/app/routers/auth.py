@@ -3,7 +3,7 @@ from models import UserRegister, UserLogin, UserOut
 from utils.security import hash_password, verify_password, create_access_token
 from datetime import timedelta
 
-router = APIRouter(prefix="/auth", tags=["Auth"])
+router = APIRouter(prefix="/v1/auth", tags=["Auth"])
 
 @router.post("/register", response_model=UserOut)
 async def register_user(user: UserRegister, request: Request):
